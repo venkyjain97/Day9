@@ -1,0 +1,39 @@
+1 a)
+function addButtonClickListener() {
+
+  var myButton = document.getElementById("myButton");
+
+  myButton.addEventListener("click", function() {
+
+    alert("Button clicked!");
+
+  });
+
+}
+/*b) Event bubbling and event capturing are two different mechanisms that describe the order in which events are handled when they occur on an element with nested child elements.
+
+Event bubbling refers to the propagation of an event from the innermost child element to the outermost parent element. This means that when an event occurs on a child element, the event is first handled by the child element, then by its parent element, and so on up to the outermost parent element.
+
+An example scenario where event bubbling would occur is when you have a list of nested HTML elements, such as a list of nested divs, and you want to attach an event listener to the outermost parent div element. When a child div element is clicked, the event bubbles up to the parent div element and triggers the event listener attached to it.
+
+Event capturing, on the other hand, refers to the propagation of an event from the outermost parent element to the innermost child element. This means that when an event occurs on a parent element, the event is first handled by the outermost parent element, then by its child element, and so on down to the innermost child element.
+
+An example scenario where event capturing would occur is when you want to handle a user's mouse movements over an image map. In this case, you can use the event capturing mechanism to track the user's mouse movements as they move from the outermost parent element to the innermost child element.*/
+
+2 a(
+var myDiv = document.querySelector(".myDiv");
+var isRed = false;
+
+myDiv.addEventListener("click", function() {
+  if (isRed) {
+    myDiv.style.backgroundColor = "blue";
+    isRed = false;
+  } else {
+    myDiv.style.backgroundColor = "red";
+    isRed = true;
+  }
+});
+
+/*b) Event propagation is the mechanism by which an event is first handled by the element that triggered the event, and then propagated to its parent elements until it reaches the outermost parent element. Event propagation can be used to simplify code */
+
+
